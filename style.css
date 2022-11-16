@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: "Kanit", sans-serif;
+  background-image: url(/img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.start__panel,
+.game {
+  width: 100vw;
+  height: 100vh;
+}
+.start__panel header {
+  width: 100%;
+  height: 60vh;
+}
+.cloud__area {
+  display: flex;
+  justify-content: space-around;
+}
+.cloud {
+  width: 10vw;
+  height: 10vh;
+}
+.cloud1 {
+  width: 20vw;
+  height: 20vh;
+  left: 1vw;
+  position: absolute;
+}
+.cloud2 {
+  width: 5vw;
+  height: 5vh;
+  align-self: center;
+}
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info__panel {
+  width: 40vw;
+  height: 80vh;
+  background-color: rgba(30, 255, 0, 0.39);
+  border: 10px solid white;
+  border-radius: 10%;
+  position: absolute;
+  bottom: 10vh;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.info__panel h1 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+  width: 100%;
+}
+.info__panel .rules {
+  border: 5px solid rgba(48, 87, 212, 0.644);
+  background-color: rgba(33, 33, 180, 0.178);
+  width: 80%;
+  height: 60%;
+  padding: 10px;
+  border-radius: 5%;
+}
+.info__panel .button__start {
+  background-color: rgb(0, 255, 242);
+  border: 5px solid rgb(47, 100, 179);
+  border-radius: 5%;
+  align-self: flex-end;
+  margin-bottom: 10px;
+  width: 50%;
+  height: 50px;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: 40vh;
+}
+
+.tree {
+  width: 20vw;
+  height: 40vh;
+  position: absolute;
+  bottom: 20vh;
+}
+.tree1 {
+  width: 30vw;
+  height: 60vh;
+  position: absolute;
+  bottom: 0vh;
+  right: 2vw;
+}
+.tree2 {
+  width: 30vw;
+  height: 50vh;
+  position: absolute;
+  bottom: 10vh;
+  left: 20vw;
+}
+.game .tree2 {
+  width: 30vw;
+  height: 50vh;
+  position: absolute;
+  bottom: 10vh;
+  left: 25vw;
+}
+
+.hidden {
+  display: none;
+}
+.tank {
+  width: 40vw;
+  height: 35vh;
+  position: absolute;
+  transform: rotate(330deg);
+  bottom: 20vh;
+}
+.plane {
+  width: 20vw;
+  height: 20vh;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+}
