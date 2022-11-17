@@ -2,12 +2,34 @@
   box-sizing: border-box;
   margin: 0;
 }
+@keyframes planeMove {
+  from {
+    right: 0;
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  to {
+    right: 100%;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes planeTwoMove {
+  from {
+    opacity: 0;
+    right: 0;
+  }
+  to {
+    opacity: 1;
+    right: 100%;
+  }
+}
 body {
   margin: 0;
   padding: 0;
   background-color: white;
   font-family: "Kanit", sans-serif;
-  background-image: url(/img/background.png);
+  background-image: url(img/background.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -126,10 +148,23 @@ footer {
   transform: rotate(330deg);
   bottom: 20vh;
 }
-.plane {
+.plane1 {
   width: 20vw;
   height: 20vh;
   position: absolute;
   cursor: pointer;
   right: 0;
+  opacity: 0;
+  animation: planeMove 3s ease-in-out;
+  animation-iteration-count: 1;
+}
+.plane {
+  opacity: 0;
+  width: 20vw;
+  height: 20vh;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  animation: planeTwoMove 5s ease-in-out;
+  animation-delay: 10s;
 }
