@@ -2,28 +2,98 @@
   box-sizing: border-box;
   margin: 0;
 }
-@keyframes planeMove {
-  from {
+@keyframes planeMoveEasy {
+  0% {
     right: 0;
-    transform: scale(0.1);
+    transform: scale(0.4);
     opacity: 0;
+    top: 5vh;
+    cursor: pointer;
   }
-  to {
+  50% {
+    top: 20vh;
+  }
+  100% {
     right: 100%;
     opacity: 1;
     transform: scale(1);
+    top: 30vh;
+    cursor: none;
   }
 }
-@keyframes planeTwoMove {
-  from {
-    opacity: 0;
+@keyframes planeMoveMedium {
+  0% {
     right: 0;
+    transform: scale(0.2);
+    opacity: 0;
+    top: 5vh;
+    cursor: pointer;
   }
-  to {
+  25% {
+    top: 20vh;
+  }
+  50% {
+    top: 2vh;
+  }
+  75% {
+    opacity: 0.9;
+  }
+  100% {
     opacity: 1;
+    transform: scale(1);
     right: 100%;
+    cursor: none;
   }
 }
+@keyframes planeMoveHard {
+  0% {
+    right: 0;
+    transform: scale(0.05);
+    opacity: 0;
+    top: 5vh;
+    cursor: pointer;
+  }
+  25% {
+    top: 30vh;
+  }
+  50% {
+    top: 0vh;
+  }
+  75% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    right: 100%;
+    cursor: none;
+  }
+}
+@keyframes planeMoveExpert {
+  0% {
+    right: 0;
+    transform: scale(0.01);
+    opacity: 0;
+    top: 0vh;
+    cursor: pointer;
+  }
+  25% {
+    top: 40vh;
+  }
+  50% {
+    top: 20vh;
+  }
+  75% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    right: 100%;
+    cursor: none;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -33,8 +103,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .start__panel,
-.game {
+.game,
+.next__panel {
   width: 100vw;
   height: 100vh;
 }
@@ -94,7 +166,8 @@ body {
   padding: 10px;
   border-radius: 5%;
 }
-.info__panel .button__start {
+.info__panel .button__start,
+.button__next {
   background-color: rgb(0, 255, 242);
   border: 5px solid rgb(47, 100, 179);
   border-radius: 5%;
@@ -152,19 +225,35 @@ footer {
   width: 20vw;
   height: 20vh;
   position: absolute;
-  cursor: pointer;
+  cursor: none;
   right: 0;
   opacity: 0;
-  animation: planeMove 3s ease-in-out;
-  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
-.plane {
-  opacity: 0;
-  width: 20vw;
-  height: 20vh;
-  position: absolute;
-  cursor: pointer;
-  right: 0;
-  animation: planeTwoMove 5s ease-in-out;
-  animation-delay: 10s;
+.score {
+  width: 10vw;
+  height: 13vh;
+  margin-top: -66px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px white solid;
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+.active {
+  transform: scale(1.0001);
+}
+.animationEasy {
+  animation: planeMoveEasy 7s ease-in-out;
+}
+.animationMedium {
+  animation: planeMoveMedium 4s ease-in-out;
+}
+.animationHard {
+  animation: planeMoveHard 2s ease-in-out;
+}
+.animationExpert {
+  animation: planeMoveExpert 1s ease-in-out;
 }

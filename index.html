@@ -49,7 +49,37 @@
         </div>
       </footer>
     </section>
-
+    <!-- Next Level Section -->
+    <section class="next__panel hidden">
+      <header>
+        <div class="cloud__area">
+          <img class="cloud" src="img/cloud.svg" />
+          <img class="cloud cloud1" src="img/cloud.svg" />
+          <div>
+            <img class="cloud cloud2" src="img/cloud.svg" />
+            <img class="cloud cloud2" src="img/cloud.svg" />
+            <img class="cloud cloud2" src="img/cloud.svg" />
+          </div>
+        </div>
+      </header>
+      <main class="info">
+        <section class="info__panel">
+          <h1>ShootToPlanes</h1>
+          <div class="rules">
+            <h2>Wynik</h2>
+            <p class="wynik">Przegrałeś</p>
+          </div>
+          <button class="button__next">Graj Dalej</button>
+        </section>
+      </main>
+      <footer>
+        <div class="tree__area">
+          <img class="tree" src="img/tree.svg" />
+          <img class="tree1" src="img/tree.svg" />
+          <img class="tree2" src="img/tree.svg" />
+        </div>
+      </footer>
+    </section>
     <!-- GAME SECTION -->
     <section class="game hidden">
       <main>
@@ -62,12 +92,19 @@
               <img class="cloud cloud2" src="img/cloud.svg" />
               <img class="cloud cloud2" src="img/cloud.svg" />
             </div>
-            <img class="plane1" src="img/plane1.svg" />
-            <img class="plane" src="img/plane.svg" />
+            <img
+              id="PlaneToShoot"
+              class="plane1 animationEasy"
+              src="img/plane1.svg"
+            />
+          </div>
+          <div class="score">
+            <h3>Score:</h3>
+            <p class="your__score">0</p>
           </div>
         </header>
 
-        <footer>
+        <footer class="miss">
           <div class="tree__area">
             <img class="tree" src="img/tree.svg" />
             <img class="tree1" src="img/tree.svg" />
