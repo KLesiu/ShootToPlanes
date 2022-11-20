@@ -25,7 +25,7 @@ const nextLevel = () => {
   next.classList.remove("hidden");
   game.classList.add("hidden");
   if ((yourscore = 1)) {
-    showScore.innerText = "Wygrałeś siema";
+    showScore.innerText = "Wygrałeś";
   }
 };
 const scorePlayer = () => {
@@ -56,9 +56,10 @@ const backToStart = () => {
 const switchLevel = () => {
   const button = document.querySelector(".button__next");
   button.addEventListener("click", () => {
-    if (plane.classList.contains("animationEasy")) {
+    if (plane.classList.contains("animationEasy") & (yourscore == 1)) {
       plane.classList.remove("animationEasy");
       plane.classList.add("animationMedium");
+
       setTimeout(levelStart, 1000);
     } else if (plane.classList.contains("animationMedium")) {
       plane.classList.remove("animationMedium");
@@ -73,12 +74,36 @@ const switchLevel = () => {
       yourscore = 3;
       score.innerHTML = yourscore;
     } else {
+      next.classList.add("hidden");
+      game.classList.add("hidden");
+      start.classList.remove("hidden");
+      text.innerText = "Gratulację, ukończyłeś/aś wszystkie dostępne poziomy";
+      buttonReset();
+      plane.classList.remove("animationExpert");
+      plane.classList.remove("animationMedium");
+      plane.classList.remove("animationHard");
+      plane.classList.add("animationEasy");
+      plane.classList.remove("active");
+    }
+  });
+};
+const buttonReset = () => {
+  buttonStart.addEventListener("click", () => {
+    if (plane.classList.contains("animationExpert")) {
+      plane.classList.add("animationEasy");
+      yourscore = 0;
+      score.innerHTML = yourscore;
     }
   });
 };
 const levelStart = () => {
   game.classList.remove("hidden");
   next.classList.add("hidden");
+};
+const changeBackground = () => {
+  if (yourscore == 1) {
+    const change = getComputedStyle(body);
+  }
 };
 // const hardLevel = () => {
 //   const button = document.querySelector(".button__next");
@@ -95,3 +120,4 @@ missTarget();
 // mediumLevel();
 // hardLevel();
 switchLevel();
+changeBackground();

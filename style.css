@@ -13,12 +13,17 @@
   50% {
     top: 20vh;
   }
+  80% {
+    transform: scale(0.9);
+  }
   100% {
     right: 100%;
     opacity: 1;
-    transform: scale(1);
+
     top: 30vh;
     cursor: none;
+    display: none;
+    transform: scale(0.00001);
   }
 }
 @keyframes planeMoveMedium {
@@ -38,11 +43,16 @@
   75% {
     opacity: 0.9;
   }
+  80% {
+    transform: scale(0.9);
+  }
   100% {
     opacity: 1;
     transform: scale(1);
     right: 100%;
     cursor: none;
+    display: none;
+    transform: scale(0.00001);
   }
 }
 @keyframes planeMoveHard {
@@ -62,11 +72,16 @@
   75% {
     opacity: 0.6;
   }
+  80% {
+    transform: scale(0.9);
+  }
   100% {
     opacity: 1;
     transform: scale(1);
     right: 100%;
     cursor: none;
+    display: none;
+    transform: scale(0.00001);
   }
 }
 @keyframes planeMoveExpert {
@@ -86,11 +101,16 @@
   75% {
     opacity: 0.3;
   }
+  80% {
+    transform: scale(0.9);
+  }
   100% {
     opacity: 1;
     transform: scale(1);
     right: 100%;
     cursor: none;
+    display: none;
+    transform: scale(0.00001);
   }
 }
 
@@ -228,7 +248,6 @@ footer {
   cursor: none;
   right: 0;
   opacity: 0;
-  animation-fill-mode: forwards;
 }
 .score {
   width: 10vw;
@@ -247,13 +266,17 @@ footer {
 }
 .animationEasy {
   animation: planeMoveEasy 10s ease-in-out;
+  animation-fill-mode: forwards;
 }
 .animationMedium {
   animation: planeMoveMedium 8s ease-in-out;
+  animation-fill-mode: forwards;
 }
 .animationHard {
   animation: planeMoveHard 7s ease-in-out;
+  animation-fill-mode: forwards;
 }
 .animationExpert {
   animation: planeMoveExpert 6s ease-in-out;
+  animation-fill-mode: forwards;
 }
