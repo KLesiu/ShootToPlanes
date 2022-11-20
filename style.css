@@ -236,10 +236,10 @@ footer {
 }
 .tank {
   width: 40vw;
-  height: 35vh;
+  height: 30vh;
   position: absolute;
   transform: rotate(330deg);
-  bottom: 20vh;
+  bottom: 18vh;
 }
 .plane1 {
   width: 20vw;

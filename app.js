@@ -59,6 +59,7 @@ const switchLevel = () => {
     if (plane.classList.contains("animationEasy") & (yourscore == 1)) {
       plane.classList.remove("animationEasy");
       plane.classList.add("animationMedium");
+      setTimeout(changeBackgroundMedium(), 100);
 
       setTimeout(levelStart, 1000);
     } else if (plane.classList.contains("animationMedium")) {
@@ -100,11 +101,15 @@ const levelStart = () => {
   game.classList.remove("hidden");
   next.classList.add("hidden");
 };
-const changeBackground = () => {
-  if (yourscore == 1) {
-    const change = getComputedStyle(body);
-  }
+const changeBackgroundMedium = () => {
+  const body = document.querySelector("body");
+  body.style.backgroundImage = "url(img/tlo.svg)";
 };
+const shoot = () => {
+  const audioTank = new Audio("mp3/tanksound.mp3");
+  audioTank.play();
+};
+
 // const hardLevel = () => {
 //   const button = document.querySelector(".button__next");
 //   button.addEventListener("click", () => {
@@ -120,4 +125,4 @@ missTarget();
 // mediumLevel();
 // hardLevel();
 switchLevel();
-changeBackground();
+shoot();
