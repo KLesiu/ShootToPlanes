@@ -2,6 +2,18 @@
   box-sizing: border-box;
   margin: 0;
 }
+@keyframes cloudAnimation {
+  from {
+    width: 20vw;
+    height: 20vh;
+    left: 1vw;
+  }
+  to {
+    width: 25vw;
+    left: 60vw;
+  }
+}
+
 @keyframes planeMoveEasy {
   0% {
     right: 0;
@@ -142,11 +154,15 @@ body {
   width: 10vw;
   height: 10vh;
 }
+
 .cloud1 {
   width: 20vw;
   height: 20vh;
   left: 1vw;
   position: absolute;
+  animation: cloudAnimation 10s ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 .cloud2 {
   width: 5vw;
