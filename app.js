@@ -47,14 +47,7 @@ const backToStart = () => {
   start.classList.remove("hidden");
   text.innerText = "You lost.Try again";
 };
-// const mediumLevel = () => {
-//   const button = document.querySelector(".button__next");
-//   button.addEventListener("click", () => {
-//     plane.classList.remove("animationEasy");
-//     plane.classList.add("animationMedium");
-//     setTimeout(levelStart, 1000);
-//   });
-// };
+
 const switchLevel = () => {
   const button = document.querySelector(".button__next");
   button.addEventListener("click", () => {
@@ -108,24 +101,9 @@ const changeBackgroundMedium = () => {
   const body = document.querySelector("body");
   body.style.backgroundImage = "url(img/tlo.svg)";
 };
-// const shoot = () => {
-//   const audioTank = new Audio("mp3/tanksound.mp3");
-//   audioTank.play();
-// };
 
-// const hardLevel = () => {
-//   const button = document.querySelector(".button__next");
-//   button.addEventListener("click", () => {
-//     if (plane.classList.contains("animationMedium")) {
-//       plane.classList.remove("animationMedium");
-//       plane.classList.add("animationHard");
-//     }
-//   });
-// };
 startTheGame();
 planeStart();
 missTarget();
-// mediumLevel();
-// hardLevel();
+
 switchLevel();
-// shoot();

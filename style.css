@@ -163,7 +163,7 @@ body {
   height: 80vh;
   background-color: rgba(30, 255, 0, 0.39);
   border: 10px solid white;
-  border-radius: 10%;
+  border-radius: 9.9%;
   position: absolute;
   bottom: 10vh;
   z-index: 1;
