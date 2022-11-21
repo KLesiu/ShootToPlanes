@@ -7,6 +7,7 @@ const miss = document.querySelector(".miss");
 const score = document.querySelector(".your__score");
 let showScore = document.querySelector(".showScore");
 let text = document.querySelector(".rules");
+const body = document.querySelector("body");
 let yourscore = 0;
 const startTheGame = () => {
   buttonStart.addEventListener("click", () => {
@@ -34,6 +35,7 @@ const scorePlayer = () => {
   if (plane.classList.contains("active")) {
     yourscore = 1;
     score.innerHTML = yourscore;
+
     setTimeout(nextLevel, 1);
   }
 };
@@ -45,7 +47,7 @@ const missTarget = () => {
 const backToStart = () => {
   game.classList.add("hidden");
   start.classList.remove("hidden");
-  text.innerText = "You lost.Try again";
+  text.innerText = "You lost. Try again";
 };
 
 const switchLevel = () => {
@@ -54,7 +56,7 @@ const switchLevel = () => {
     if (plane.classList.contains("animationEasy") & (yourscore == 1)) {
       plane.classList.remove("animationEasy");
       plane.classList.add("animationMedium");
-      setTimeout(changeBackgroundMedium(), 100);
+      changeBackgroundMedium();
 
       setTimeout(levelStart, 1000);
     } else if (plane.classList.contains("animationMedium")) {
@@ -63,6 +65,7 @@ const switchLevel = () => {
       yourscore = 2;
       score.innerHTML = yourscore;
       setTimeout(levelStart, 1000);
+      changeBackgroundHard();
     } else if (plane.classList.contains("animationHard")) {
       plane.classList.remove("animationHard");
       plane.classList.add("animationExpert");
@@ -97,9 +100,12 @@ const levelStart = () => {
   game.classList.remove("hidden");
   next.classList.add("hidden");
 };
+
 const changeBackgroundMedium = () => {
-  const body = document.querySelector("body");
-  body.style.backgroundImage = "url(img/tlo.svg)";
+  body.style.backgroundImage = "url(img/tlo1.svg)";
+};
+const changeBackgroundHard = () => {
+  body.style.backgroundImage = "url(img/tlo2.svg)";
 };
 
 startTheGame();
