@@ -282,19 +282,19 @@ footer {
   transform: scale(1.0001);
 }
 .animationEasy {
-  animation: planeMoveEasy 10s ease-in-out;
+  animation: planeMoveEasy 8s ease-in-out;
   animation-fill-mode: forwards;
 }
 .animationMedium {
-  animation: planeMoveMedium 8s ease-in-out;
+  animation: planeMoveMedium 5s ease-in-out;
   animation-fill-mode: forwards;
 }
 .animationHard {
-  animation: planeMoveHard 7s ease-in-out;
+  animation: planeMoveHard 3s ease-in-out;
   animation-fill-mode: forwards;
 }
 .animationExpert {
-  animation: planeMoveExpert 6s ease-in-out;
+  animation: planeMoveExpert 1s ease-in-out;
   animation-fill-mode: forwards;
 }
 button {
