@@ -185,6 +185,7 @@ body {
   height: 60%;
   padding: 10px;
   border-radius: 5%;
+  text-align: center;
 }
 .info__panel .button__start,
 .button__next {
@@ -292,15 +293,19 @@ button {
   .info__panel h1 {
     font-size: 20px;
   }
-  .rules {
-    font-size: 10px;
+  .info__panel .rules {
+    font-size: 14px;
     width: 90%;
-    height: 72%;
+    height: 78%;
   }
   .tree2 {
     display: none;
   }
   .score {
     width: 25vw;
+  }
+  .tree {
+    width: 33vw;
+    left: 45vw;
   }
 }
