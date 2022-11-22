@@ -365,16 +365,15 @@ button {
     font-size: 1rem;
   }
   .tank {
-    bottom: 0;
-    height: 36vh;
+    bottom: 2px;
   }
   .tankMedium {
     bottom: 0vh;
-    height: 40vh;
+    height: 25vh;
   }
   .tankHard {
     bottom: 0vh;
-    height: 40vh;
+    height: 25vh;
   }
   .tree {
     bottom: 1vh;
