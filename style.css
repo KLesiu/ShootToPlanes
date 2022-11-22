@@ -356,7 +356,7 @@ button {
   .info__panel .rules {
     width: 97%;
     height: 67%;
-    font-size: 12px;
+    font-size: 11px;
   }
   .score {
     width: 10vw;
@@ -366,18 +366,18 @@ button {
     font-size: 1rem;
   }
   .tank {
-    bottom: 2px;
+    top: 60vh;
   }
   .tankMedium {
-    bottom: 15vh;
+    top: 60vh;
     height: 37vh;
   }
   .tankHard {
-    bottom: 0vh;
+    top: 75vh;
     height: 33vh;
   }
   .tree {
-    bottom: 1vh;
+    top: 60vh;
   }
   .tree2 {
     bottom: 0vh;
