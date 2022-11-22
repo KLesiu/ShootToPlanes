@@ -366,14 +366,15 @@ button {
   }
   .tank {
     bottom: 0;
+    height: 36vh;
   }
   .tankMedium {
     bottom: 0vh;
-    height: 25vh;
+    height: 40vh;
   }
   .tankHard {
     bottom: 0vh;
-    height: 25vh;
+    height: 40vh;
   }
   .tree {
     bottom: 1vh;
