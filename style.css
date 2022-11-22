@@ -309,6 +309,7 @@ button {
 .tankMedium {
   bottom: 16vh;
   width: 28vw;
+  transform: rotate3d(-266, 979, 92, 219deg);
 }
 .footerHard {
   display: flex;
@@ -368,12 +369,12 @@ button {
     bottom: 2px;
   }
   .tankMedium {
-    bottom: 0vh;
-    height: 25vh;
+    bottom: 15vh;
+    height: 37vh;
   }
   .tankHard {
     bottom: 0vh;
-    height: 25vh;
+    height: 33vh;
   }
   .tree {
     bottom: 1vh;

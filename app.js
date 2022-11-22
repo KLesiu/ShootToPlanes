@@ -59,6 +59,7 @@ const switchLevel = () => {
       plane.classList.add("animationMedium");
       changeBackgroundMedium();
       tank.classList.add("tankMedium");
+      miss.classList.add("footerHard");
 
       setTimeout(levelStart, 1000);
     } else if (plane.classList.contains("animationMedium")) {
@@ -130,5 +131,4 @@ const hideItems = () => {
 startTheGame();
 planeStart();
 missTarget();
-
 switchLevel();
