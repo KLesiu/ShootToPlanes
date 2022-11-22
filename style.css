@@ -277,6 +277,9 @@ footer {
   text-align: center;
   font-size: 1.2rem;
   padding: 10px;
+  border-radius: 10%;
+  background-color: rgb(43, 127, 175);
+  color: white;
 }
 .active {
   transform: scale(1.0001);
@@ -300,9 +303,26 @@ footer {
 button {
   font-family: "Press Start 2P", cursive;
 }
+.opacity {
+  opacity: 0;
+}
+.tankMedium {
+  bottom: 16vh;
+  width: 28vw;
+}
+.footerHard {
+  display: flex;
+  justify-content: center;
+}
+.tankHard {
+  transform: rotate3d(-266, 979, 92, 219deg);
+  width: 34vw;
+  height: 33vh;
+  bottom: 15vh;
+}
 
 /* Mobile */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) and (orientation: portrait) {
   .info__panel {
     width: 80vw;
   }
@@ -323,5 +343,24 @@ button {
   .tree {
     width: 33vw;
     left: 45vw;
+  }
+}
+/* Mobile landscape */
+@media only screen and (max-width: 900px) and (orientation: landscape) {
+  .info__panel {
+    width: 95vw;
+    height: 85vh;
+  }
+  .info__panel .rules {
+    width: 97%;
+    height: 67%;
+    font-size: 12px;
+  }
+  .score {
+    width: 10vw;
+    height: 16vh;
+    margin-top: -38px;
+    padding: 0;
+    font-size: 1rem;
   }
 }

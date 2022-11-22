@@ -8,6 +8,7 @@ const score = document.querySelector(".your__score");
 let showScore = document.querySelector(".showScore");
 let text = document.querySelector(".rules");
 const body = document.querySelector("body");
+const tank = document.querySelector(".tank");
 let yourscore = 0;
 const startTheGame = () => {
   buttonStart.addEventListener("click", () => {
@@ -57,6 +58,7 @@ const switchLevel = () => {
       plane.classList.remove("animationEasy");
       plane.classList.add("animationMedium");
       changeBackgroundMedium();
+      tank.classList.add("tankMedium");
 
       setTimeout(levelStart, 1000);
     } else if (plane.classList.contains("animationMedium")) {
@@ -66,6 +68,8 @@ const switchLevel = () => {
       score.innerHTML = yourscore;
       setTimeout(levelStart, 1000);
       changeBackgroundHard();
+      tank.classList.add("tankHard");
+      miss.classList.add("footerHard");
     } else if (plane.classList.contains("animationHard")) {
       plane.classList.remove("animationHard");
       plane.classList.add("animationExpert");
@@ -103,9 +107,24 @@ const levelStart = () => {
 
 const changeBackgroundMedium = () => {
   body.style.backgroundImage = "url(img/tlo1.svg)";
+  hideItems();
 };
 const changeBackgroundHard = () => {
   body.style.backgroundImage = "url(img/tlo2.svg)";
+};
+const hideItems = () => {
+  const treeGame = document.querySelector(".tree__area-game");
+  treeGame.classList.add("hidden");
+  const treeNext = document.querySelector(".tree__area-next");
+  treeNext.classList.add("hidden");
+  const treeMenu = document.querySelector(".tree__area-menu");
+  treeMenu.classList.add("hidden");
+  const cloudGame = document.querySelector(".cloud__area-game");
+  const cloudMenu = document.querySelector(".cloud__area-menu");
+  const cloudNext = document.querySelector(".cloud__area-next");
+  cloudGame.classList.add("opacity");
+  cloudMenu.classList.add("opacity");
+  cloudNext.classList.add("opacity");
 };
 
 startTheGame();
