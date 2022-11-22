@@ -349,7 +349,8 @@ button {
 @media only screen and (max-width: 900px) and (orientation: landscape) {
   .info__panel {
     width: 95vw;
-    height: 85vh;
+    height: 78vh;
+    bottom: 5vh;
   }
   .info__panel .rules {
     width: 97%;
@@ -362,5 +363,14 @@ button {
     margin-top: -38px;
     padding: 0;
     font-size: 1rem;
+  }
+  .tank {
+    bottom: 3vh;
+  }
+  .tankMedium {
+    bottom: 3vh;
+  }
+  .tankHard {
+    bottom: 3vh;
   }
 }
