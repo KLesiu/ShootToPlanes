@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ShootToPlanes Game</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/fontello.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,21 +31,28 @@
       <main class="info">
         <section class="info__panel">
           <h1>ShootToPlanes</h1>
-          <div class="rules">
+          <button class="showRules">Show rules</button>
+          <button class="showAuthors">Show authors</button>
+          <div class="rules hidden">
             <h2>Rules</h2>
             You have to click on the plane when it is flying. If you hit you
             will go to the next level, when you don't hit plane but hit sky you
             will lose. If you dont hit both you have to click sky to reset the
-            level.
-            <ul>
-              Game has four levels:
-              <li>Level easy: Plane animation speed-8s</li>
-              <li>Level medium: Plane animation speed-5s</li>
-
-              <li>Level hard: Plane animation speed-3s</li>
-              <li>Level extreme: Plane animation speed-1s.</li>
-            </ul>
-            Have fun and Good Luck!
+            level. Have fun and Good Luck!
+          </div>
+          <div class="authors hidden">
+            <h2>Authors</h2>
+            Desing and Created by KLesiu
+            <a href="https://github.com/KLesiu" target="_blank"
+              ><i class="icon-github-squared"></i
+            ></a>
+            <br />
+            Graphics by lesiujr<i class="icon-snapchat"></i><br />
+            Items by
+            <a href="https://pixabay.com/pl/" target="_blank">pixabay</a> &
+            <a href="https://publicdomainvectors.org/" target="_blank"
+              >publicdomainvectors</a
+            >
           </div>
           <button class="button__start">Start!</button>
         </section>

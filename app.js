@@ -127,8 +127,23 @@ const hideItems = () => {
   cloudMenu.classList.add("opacity");
   cloudNext.classList.add("opacity");
 };
+const mainMenu = () => {
+  const rules = document.querySelector(".rules");
+  const authors = document.querySelector(".authors");
+  const rulesButton = document.querySelector(".showRules");
+  const authorsButton = document.querySelector(".showAuthors");
+  rulesButton.addEventListener("click", () => {
+    rules.classList.toggle("hidden");
+    authors.classList.add("hidden");
+  });
+  authorsButton.addEventListener("click", () => {
+    authors.classList.toggle("hidden");
+    rules.classList.add("hidden");
+  });
+};
 
 startTheGame();
 planeStart();
 missTarget();
 switchLevel();
+mainMenu();
