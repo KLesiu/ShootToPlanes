@@ -309,7 +309,7 @@ footer {
   animation-fill-mode: forwards;
 }
 .animationExpert {
-  animation: planeMoveExpert 8s ease-in-out;
+  animation: planeMoveExpert 0.8s ease-in-out;
   animation-fill-mode: forwards;
 }
 button {
