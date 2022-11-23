@@ -75,8 +75,11 @@ const switchLevel = () => {
       plane.classList.remove("animationHard");
       plane.classList.add("animationExpert");
       setTimeout(levelStart, 1000);
+      changeBackgroundExpert();
       yourscore = 3;
       score.innerHTML = yourscore;
+      plane.classList.add("last");
+      tank.classList.remove("tankHard");
     } else {
       next.classList.add("hidden");
       game.classList.add("hidden");
@@ -91,6 +94,12 @@ const switchLevel = () => {
       plane.classList.remove("active");
       yourscore = 0;
       score.innerHTML = yourscore;
+      changeBackgroundEasy();
+      showItems();
+      tank.classList.remove("tankHard");
+      tank.classList.remove("tankMedium");
+      tank.classList.add("tank");
+      miss.classList.remove("footerHard");
     }
   });
 };
@@ -105,13 +114,18 @@ const levelStart = () => {
   game.classList.remove("hidden");
   next.classList.add("hidden");
 };
-
+const changeBackgroundEasy = () => {
+  body.style.backgroundImage = "url(img/tlo.svg)";
+};
 const changeBackgroundMedium = () => {
   body.style.backgroundImage = "url(img/tlo1.svg)";
   hideItems();
 };
 const changeBackgroundHard = () => {
   body.style.backgroundImage = "url(img/tlo2.svg)";
+};
+const changeBackgroundExpert = () => {
+  body.style.backgroundImage = "url(img/tlo3.svg)";
 };
 const hideItems = () => {
   const treeGame = document.querySelector(".tree__area-game");
@@ -126,6 +140,20 @@ const hideItems = () => {
   cloudGame.classList.add("opacity");
   cloudMenu.classList.add("opacity");
   cloudNext.classList.add("opacity");
+};
+const showItems = () => {
+  const treeGame = document.querySelector(".tree__area-game");
+  treeGame.classList.remove("hidden");
+  const treeNext = document.querySelector(".tree__area-next");
+  treeNext.classList.remove("hidden");
+  const treeMenu = document.querySelector(".tree__area-menu");
+  treeMenu.classList.remove("hidden");
+  const cloudGame = document.querySelector(".cloud__area-game");
+  const cloudMenu = document.querySelector(".cloud__area-menu");
+  const cloudNext = document.querySelector(".cloud__area-next");
+  cloudGame.classList.remove("opacity");
+  cloudMenu.classList.remove("opacity");
+  cloudNext.classList.remove("opacity");
 };
 const mainMenu = () => {
   const rules = document.querySelector(".rules");
