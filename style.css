@@ -264,7 +264,7 @@ footer {
   display: none;
 }
 .tank {
-  width: 37vw;
+  width: 34vw;
   height: 27vh;
   position: absolute;
   transform: rotate(330deg);
