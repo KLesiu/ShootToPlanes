@@ -264,8 +264,8 @@ footer {
   display: none;
 }
 .tank {
-  width: 40vw;
-  height: 30vh;
+  width: 37vw;
+  height: 27vh;
   position: absolute;
   transform: rotate(330deg);
   bottom: 18vh;
@@ -320,7 +320,7 @@ button {
 }
 .tankMedium {
   bottom: 16vh;
-  width: 28vw;
+  width: 25vw;
   transform: rotate3d(-266, 979, 92, 219deg);
 }
 .footerHard {
@@ -329,8 +329,8 @@ button {
 }
 .tankHard {
   transform: rotate3d(-266, 979, 92, 219deg);
-  width: 34vw;
-  height: 33vh;
+  width: 30vw;
+  height: 27vh;
   bottom: 15vh;
 }
 a {
